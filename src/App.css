@@ -1,39 +1,21 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-
-.main {
-  position: relative;
-
+.app-container {
   display: flex;
   flex-direction: column;
-  animation: fadeIn 2s;
   min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-
-.navigation  {
-  font-family: var(--head-font);
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  height: 15vh;
-
-  width: 90%;
-  max-width: 1200px;
-
-  margin: 0 auto;
+.main-content {
+  flex: 1;
 }
 
-.nav-link {
-  font-size: 2.25rem;
-  text-decoration: none;
-  color: #000;
-  margin-left: 1.5rem;
+a {
+  text-decoration:none;
+  color: inherit;
 }

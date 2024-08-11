@@ -1,52 +1,30 @@
-import './App.css'
-import {React, useState, useEffect } from 'react';
-import { ReactDOM } from 'react-dom';
-import {Link, NavLink, Route, Routes, useLocation} from 'react-router-dom';
-import {routes} from './components/routes';
+import './App.css';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { About } from './pages/About,';
+import { Projects } from './pages/Projects';
+import { Contact } from './pages/Contact';
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
+import { Layout } from './components/Layout';
+import { Resume } from './pages/Resume';
 
 function App() {
 
-  const [activePath, setActivePath] = useState('');
-
-  useEffect(() => {
-    switch (location.pathname){
-      case ('/'):
-        setActivePath('home');
-        break;
-        default:
-          setActivePath('')
-          break;
-    }
-  }, [location.pathname]);
-
   return (
-    <>
-      <main className="main">
-        <nav className="navigation">
-          <NavLink
-          to="/home"
-          className={({ isActive, isPending, isTransitioning}) =>
-        [
-          isPending ? "pending" : "",
-          isActive ? "active" : "",
-          isTransitioning ? "transitioning" : "",
-        ].join(" ")
-          }
-        >
-          Home
-          </NavLink>
-        </nav>
-        <Routes>
-          {routes.map((route) => 
-          <Route exact path={route.path}
-          render={route.component}>
-
-          </Route>)}
-        </Routes>
-      </main>
-      
-    </>
-  )
+    <div className='app-container'>
+      <Layout>
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/resume" element={<Resume />} />
+    </Routes>
+      </Layout>
+    </div>
+  );
 }
 
 export default App

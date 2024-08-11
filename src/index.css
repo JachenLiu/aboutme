@@ -1,67 +1,33 @@
-/* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;700&display=swap');
-
-
-
-:root {
-  --home-bg-color: #ffffff;
-  --btn-color: rgba(141, 142, 143, 0.21);
-  --btn-hover-color: rgba(141, 142, 143, 0.5);
-
-
-  --head-font: 'Bebas Neue', sans-serif;
-  --sub-font: 'Roboto Slab', serif;
-}
-
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 16px;
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-  font-size: 16px;
-  font-family: var(--sub-font);
-  background-color: var(--home-bg-color);
-
+:root {
+  --background-color: black;
+  --text-color: grey;
+  --navbar-background: #222222;
+  --navbar-text-color: grey;
+  --footer-background: #222222;
+  --footer-text-color: grey;
+  --border-color:rgb(80, 80, 80);
 }
 
-
-
-.main {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  animation: fadeIn 2s;
-  min-height: 100vh;
+/* Light Mode */
+[data-theme='light'] {
+  --background-color: grey;
+  --text-color: #000000;
+  --navbar-background: rgb(77, 77, 77);
+  --navbar-text-color: #000000;
+  --footer-background: rgb(77, 77, 77);
+  --footer-text-color: #000000;
+  --border-color: rgb(194, 194, 194);
 }
-
-
-.navigation  {
-  font-family: var(--head-font);
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  height: 15vh;
-
-  width: 90%;
-  max-width: 1200px;
-
-  margin: 0 auto;
-}
-
-.nav-link {
-  font-size: 2.25rem;
-  text-decoration: none;
-  color: #000;
-  margin-left: 1.5rem;
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: inherit;
 }

@@ -9,7 +9,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Layout } from './components/Layout';
 import { Resume } from './pages/Resume';
-
+import { Trees } from './pages/Trees';
 function App() {
 
   return (
@@ -21,6 +21,7 @@ function App() {
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/resume" element={<Resume />} />
+      <Route path="/trees" element={<Trees />} />
     </Routes>
       </Layout>
     </div>

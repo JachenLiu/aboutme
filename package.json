@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jachenliu.github.io/aboutme",
+  "homepage": "https://jachenliu.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

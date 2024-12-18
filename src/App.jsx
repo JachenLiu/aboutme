@@ -11,6 +11,8 @@ import { Layout } from './components/Layout';
 import { Resume } from './pages/Resume';
 import { NotFound } from './pages/NotFound';
 import { Trees } from './pages/Trees';
+import { Sandbox } from './pages/Sandbox';
+import Cards from './pages/Cards';
 function App() {
 
   const location = useLocation();
@@ -23,6 +25,8 @@ function App() {
       '/contact': 'Contact - Jachen',
       '/resume': 'Resume - Jachen',
       '/trees': 'Trees - Jachen',
+      '/sandbox': 'Sandbox - Jachen',
+      '/cards' : 'Cards - Jachen',
     };
     document.title = pageTitles[location.pathname] || 'Jachen';
   }, [location]);
@@ -37,6 +41,8 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/resume" element={<Resume />} />
       <Route path="/trees" element={<Trees />} />
+      <Route path="/sandbox" element={<Sandbox />} />
+      <Route path="/cards" element={<Cards />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
       </Layout>

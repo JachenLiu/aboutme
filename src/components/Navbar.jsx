@@ -33,6 +33,9 @@ export function Navbar() {
         <li><Link to="/projects"className='navbar-link'>Projects</Link></li>
         {/* <li><Link to="/contact"className='navbar-link'>Contact</Link></li> */}
         <li><Link to="/resume"className='navbar-link'>Resume</Link></li>
+        <li><Link to="/sandbox"className='navbar-link'>Sandbox</Link></li>
+        <li><Link to="/cards"className='navbar-link'>Cards</Link></li>
+
         <button onClick={toggleTheme} className="theme-toggle">
           {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
         </button>

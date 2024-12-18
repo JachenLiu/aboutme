@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/cards.css';
 
 const suits = ['hearts', 'diamonds', 'clubs', 'spades'];
-const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
+const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
 
 function createDeck() {
   const deck = [];
@@ -45,7 +45,7 @@ export default function Cards() {
             key={index}
             className="card"
             style={{
-              backgroundImage: `url('src/assets/images/cards/${card.value}_of_${card.suit}.png')`,
+              backgroundImage: `url('/cards/${card.value}_of_${card.suit}.png')`,
             }}
           ></div>
         ))}
